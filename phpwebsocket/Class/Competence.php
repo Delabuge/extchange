@@ -1,16 +1,18 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+require_once(realpath(dirname(__FILE__)) . '/Uilisateur.php');
 
 /**
- * Description of Competence
- *
- * @author Firtorios
+ * @access public
+ * @author Cocotier_D_Iles
  */
 class Competence {
-    //put your code here
+	/**
+	 * @AttributeType string
+	 */
+	private $_listCategorie;
+	/**
+	 * @AssociationType Uilisateur
+	 */
+	public $_unnamed_Uilisateur_;
 }
+?>

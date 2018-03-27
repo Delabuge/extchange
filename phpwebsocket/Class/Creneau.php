@@ -1,16 +1,19 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+require_once(realpath(dirname(__FILE__)) . '/Plateforme.php');
 
 /**
- * Description of Creneau
- *
- * @author Firtorios
+ * @access public
+ * @author Cocotier_D_Iles
  */
 class Creneau {
-    //put your code here
+	private $_creDate;
+	/**
+	 * @AttributeType boolean
+	 */
+	private $_creDemiJour;
+	/**
+	 * @AssociationType Plateforme
+	 */
+	public $_unnamed_Plateforme_;
 }
+?>

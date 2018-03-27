@@ -1,16 +1,42 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+require_once(realpath(dirname(__FILE__)) . '/Creneau.php');
+require_once(realpath(dirname(__FILE__)) . '/Competence.php');
+require_once(realpath(dirname(__FILE__)) . '/Activite.php');
+require_once(realpath(dirname(__FILE__)) . '/Uilisateur.php');
 
 /**
- * Description of Missionne
- *
- * @author Firtorios
+ * @access public
+ * @author Cocotier_D_Iles
  */
-class Missionne {
-    //put your code here
+class Missionne extends Uilisateur {
+
+	/**
+	 * @access public
+	 * @param Creneau aC1
+	 * @ParamType aC1 Creneau
+	 */
+	public function misChoisirCreneau(&Creneau $aC1) {
+		// Not yet implemented
+	}
+
+	/**
+	 * @access public
+	 * @param Missionne aM1
+	 * @param Competence aCompetenceDemandeur
+	 * @ParamType aM1 Missionne
+	 * @ParamType aCompetenceDemandeur Competence
+	 */
+	public function misNouvelleActivite(&Missionne $aM1, &Competence $aCompetenceDemandeur) {
+		// Not yet implemented
+	}
+
+	/**
+	 * @access public
+	 * @param Activite aA1
+	 * @ParamType aA1 Activite
+	 */
+	public function misChangerActivite(&Activite $aA1) {
+		// Not yet implemented
+	}
 }
+?>

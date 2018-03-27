@@ -1,16 +1,24 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+require_once(realpath(dirname(__FILE__)) . '/Creneau.php');
+require_once(realpath(dirname(__FILE__)) . '/Activite.php');
+require_once(realpath(dirname(__FILE__)) . '/Plateforme.php');
 
 /**
- * Description of Rencontre
- *
- * @author Firtorios
+ * @access public
+ * @author Cocotier_D_Iles
  */
 class Rencontre {
-    //put your code here
+	/**
+	 * @AttributeType Creneau
+	 */
+	private $_renDate;
+	/**
+	 * @AttributeType Activite
+	 */
+	private $_tabActivite;
+	/**
+	 * @AssociationType Plateforme
+	 */
+	public $_unnamed_Plateforme_;
 }
+?>
