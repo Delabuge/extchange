@@ -15,7 +15,7 @@ class Demandeur extends Uilisateur {
 	 * @ParamType aA1 Activite
 	 * @ReturnType boolean
 	 */
-	public function demProposerActiviteDemandeur(&Activite $aA1) {
+	public function demProposerActiviteDemandeur($aA1) {
 		// Not yet implemented
 	}
 }

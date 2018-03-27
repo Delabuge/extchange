@@ -30,7 +30,7 @@ class Uilisateur {
 	 * @param Creneau aC1
 	 * @ParamType aC1 Creneau
 	 */
-	public function utiCalendierMAJ(&Creneau $aC1) {
+	public function utiCalendierMAJ($aC1) {
 		// Not yet implemented
 	}
 
@@ -39,7 +39,7 @@ class Uilisateur {
 	 * @param Creneau aC1
 	 * @ParamType aC1 Creneau
 	 */
-	public function utiProposerCreneau(&Creneau $aC1) {
+	public function utiProposerCreneau($aC1) {
 		// Not yet implemented
 	}
 
@@ -59,7 +59,7 @@ class Uilisateur {
 	 * @ParamType aTabComp Competence
 	 * @ReturnType void
 	 */
-	public function setTabComp(&Competence $aTabComp) {
+	public function setTabComp($aTabComp) {
 		$this->_tabComp = $aTabComp;
 	}
 

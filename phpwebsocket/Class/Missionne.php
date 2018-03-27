@@ -15,7 +15,7 @@ class Missionne extends Uilisateur {
 	 * @param Creneau aC1
 	 * @ParamType aC1 Creneau
 	 */
-	public function misChoisirCreneau(&Creneau $aC1) {
+	public function misChoisirCreneau($aC1) {
 		// Not yet implemented
 	}
 
@@ -26,7 +26,7 @@ class Missionne extends Uilisateur {
 	 * @ParamType aM1 Missionne
 	 * @ParamType aCompetenceDemandeur Competence
 	 */
-	public function misNouvelleActivite(&Missionne $aM1, &Competence $aCompetenceDemandeur) {
+	public function misNouvelleActivite($aM1, $aCompetenceDemandeur) {
 		// Not yet implemented
 	}
 
@@ -35,7 +35,7 @@ class Missionne extends Uilisateur {
 	 * @param Activite aA1
 	 * @ParamType aA1 Activite
 	 */
-	public function misChangerActivite(&Activite $aA1) {
+	public function misChangerActivite($aA1) {
 		// Not yet implemented
 	}
 }

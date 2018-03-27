@@ -35,7 +35,7 @@ class Plateforme {
 	 * @ParamType aM1 Missionne
 	 * @ParamType aC1 Creneau
 	 */
-	public function plaSoumettreCreneaux(&Missionne $aM1, &Creneau $aC1) {
+	public function plaSoumettreCreneaux($aM1, $aC1) {
 		// Not yet implemented
 	}
 
@@ -57,7 +57,7 @@ class Plateforme {
 	 * @ParamType aD1 Demandeur
 	 * @ParamType aM1 Missionne
 	 */
-	public function plaCreerActivite(&$aActNom, &Demandeur $aD1, &Missionne $aM1) {
+	public function plaCreerActivite(&$aActNom, $aD1, $aM1) {
 		// Not yet implemented
 	}
 
@@ -70,7 +70,7 @@ class Plateforme {
 	 * @ParamType aA1 Activite
 	 * @ParamType aA2 Activite
 	 */
-	public function plaCreerRencontre(&Creneau $aRenDate, &Activite $aA1, &Activite $aA2) {
+	public function plaCreerRencontre($aRenDate, $aA1, $aA2) {
 		// Not yet implemented
 	}
 
