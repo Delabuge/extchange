@@ -1,0 +1,312 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Mise en forme de la plateforme pour php websocket</title>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/template.css"/>
+    </head>
+
+
+    <body data-target="#nino-navbar" data-spy="scroll">
+
+        <!-- Header
+================================================== -->
+        <header id="nino-header">
+            <div id="nino-headerInner">
+                <nav id="nino-navbar" class="navbar navbar-default" role="navigation">
+                    <div class="container">
+
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed"
+                                    data-toggle="collapse" data-target="#nino-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"/>
+                                <span class="icon-bar"/>
+                                <span class="icon-bar"/>
+                            </button>
+                            <a class="navbar-brand" href="homepage.html">BUGE<br/>DELAPERRELLE</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="nino-menuItem pull-right">
+
+                            <ul class="nino-iconsGroup nav navbar-nav">
+                                <li>
+                                    <a href="#">
+                                        <i class="mdi mdi-cart-outline nino-icon"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nino-search">
+                                        <i class="mdi mdi-magnify nino-icon"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+
+                <section id="nino-slider" class="carousel slide container"
+                         data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <h2 class="nino-sectionHeading"> PLATEFORME EXTCHANGE</h2>
+
+                            <a href="https://fr.wikipedia.org/wiki/Plate-forme_collaborative"
+                               class="nino-btn">En savoir plus</a>
+                        </div>
+
+                    </div>
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators clearfix">
+                        <li data-target="#nino-slider" data-slide-to="0" class="active">
+                            <div class="inner">
+                                <span class="number">01</span> Profil </div>
+                        </li>
+                        <li data-target="#nino-slider" data-slide-to="1">
+                            <div class="inner">
+                                <span class="number">02</span> Créer une activité </div>
+                        </li>
+                        <li data-target="#nino-slider" data-slide-to="2">
+                            <div class="inner">
+                                <span class="number">03</span> Rendre un service </div>
+                        </li>
+                        <li data-target="#nino-slider" data-slide-to="3">
+                            <div class="inner">
+                                <span class="number">04</span> A propos </div>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+        </header>
+        <!--/#header-->
+
+        <!-- INTRODUCTION
+================================================== -->
+        <section id="nino-story">
+            <div class="container">
+                <h2 class="nino-sectionHeading"> Qu'est-ce que Extchange ?  </h2>
+                <p class="nino-sectionDesc">Extchange est un système permettant à des personnes d'échanger des compétences (ex. : jardinage, administration d'un ordinateur), permettant d'accomplir des activités (ex. : tailler un rosier, installer un logiciel), avec des personnes près d'elles, à des créneaux leur convenant, et en tenant compte de la météo si certaines activités en dépendent.</p>                
+            </div>
+        </section>
+        <!-- FIN INTRODUCTION -->
+
+        <p id="Selection1"/>
+        <!-- ============= PROFIL ============= -->
+        <section id="nino-happyClient">
+            <div class="container">
+                <h2 class="nino-sectionHeading">Créer un profil</h2>
+                <span class="nino-subHeading"> </span></h2>
+
+                <div class="sectionContent">
+                    <div class="fw" layout="row">
+                        <div class="col-md-8 col-sm-8 item ">
+                            <i class="mdi mdi-apple-keyboard-command nino-icon fsr"/>
+
+                            <form method="post" action="traitement.php">
+                                <p>
+                                    <label>Entrez votre pseudo </label> : <input type="text" name="pseudo" />
+                                </p>
+                                <p>
+                                    <label>Entrez votre ville </label> : <input type="text" name="ville" />
+                                </p>  
+
+                                <p>
+                                    Cochez les compétences que avez :<br />
+
+                                    <table>
+                                        <tr>
+                                            <td><input type="checkbox" name="cuisine" id="1" /> <label for="cuisine">Cuisine &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="mecanique" id="2" /> <label for="mecanique">Mécanique &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="bricolage" id="3" /> <label for="bricolage">Bricolage &nbsp;</label><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="couture" id="4" /> <label for="couture">Couture &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="jardinage" id="5" /> <label for="jardinage">Jardinage &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="informatique" id="6" /> <label for="informatique">Informatique &nbsp;</label><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="voiture" id="7" /> <label for="voiture">Co-voiturage &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="cours" id="8" /> <label for="cours">Cours &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="aideperso" id="9" /> <label for="aideperso">Aide à la personne &nbsp;</label><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="loisirs" id="10" /> <label for="loisirs">Loisirs &nbsp;</label><br /></td>
+                                            <td><input type="checkbox" name="autre" id="11" /> <label for="autre">Autre &nbsp;</label>             </td>   
+                                        </tr>
+                                    </table>
+                                </p>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 item ">
+                            <div layout="row">
+                                <i class="mdi mdi-desktop-mac nino-icon fsr"/>
+                                <div>
+                                    <p>
+                                        <label>Entrez vos disponibilités :</label>
+                                        <br />Lundi :
+                                        <input type="checkbox" name="lundi_am" id="1" /> <label for="lundi_am">AM</label>
+                                        <input type="checkbox" name="lundi_pm" id="2" /> <label for="lundi_pm">PM</label><br />
+                                        Mardi : 
+                                        <input type="checkbox" name="mardi_am" id="3" /> <label for="mardi_am">AM</label>
+                                        <input type="checkbox" name="mardi_pm" id="4" /> <label for="mardi_pm">PM</label><br />
+                                        Mercredi : 
+                                        <input type="checkbox" name="mercredi_am" id="5" /> <label for="mercredi_am">AM</label>
+                                        <input type="checkbox" name="mercredi_pm" id="6" /> <label for="mercredi_pm">PM</label><br />
+                                        Jeudi :                  
+                                        <input type="checkbox" name="jeudi_am" id="7" /> <label for="jeudi_am">AM</label>
+                                        <input type="checkbox" name="jeudi_pm" id="8" /> <label for="jeudi_pm">PM</label><br />
+                                        Vendredi : 
+                                        <input type="checkbox" name="vendredi_am" id="9" /> <label for="vendredi_am">AM</label>
+                                        <input type="checkbox" name="vendredi_pm" id="10" /> <label for="vendredi_pm">PM</label><br />
+                                        Samedi : 
+                                        <input type="checkbox" name="samedi_am" id="11" /> <label for="samedi_am">AM</label>
+                                        <input type="checkbox" name="samedi_pm" id="12" /> <label for="samedi_pm">PM</label><br />
+                                        Dimanche : 
+                                        <input type="checkbox" name="dimanche_am" id="13" /> <label for="dimanche_am">AM</label>
+                                        <input type="checkbox" name="dimanche_pm" id="14" /> <label for="dimanche_pm">PM</label><br />
+                                    </p>
+
+                                    <input type="submit" value="Créer le profil" />            
+                                    </form>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- FIN PROFIL -->
+
+
+        <!-- CREER ACTIVITE
+================================================== -->
+        <section id="nino-uniqueDesign2">
+            <div class="container">
+                <h2 class="nino-sectionHeading">
+                    <span class="nino-subHeading"> </span> Créer une activité </h2>
+
+                <div class="sectionContent">
+                    <div class="fw" layout="row">
+
+
+
+                        <div class="col-md-8 col-sm-8 item ">
+                            <div layout="row">
+                                <i class="mdi mdi-buffer nino-icon fsr"/>
+                                <div>
+                                    <h4 class="nino-serviceTitle">Demander une activité</h4>
+
+
+                                    <form method="post" action="traitement.php">
+                                        <p>
+                                            <label>ID de l'activité</label> : <input type="number" />
+                                        </p>
+                                        <p>
+                                            <label for="competence">Vous pouvez demander un service en retour de votre activité.<br/>Sélectionner la competence du demandeur qui vous intéresse :</label><br />
+
+                                            <select name="competence" id="competence">
+                                                <option value="1">Cuisine</option>
+                                                <option value="2">Mecanique</option>
+                                                <option value="3">Bricolage</option>
+                                                <option value="4">Couture</option>
+                                                <option value="5">Jardinage</option>
+                                                <option value="6">Informatique</option>
+                                                <option value="7">Co-Voiturage</option>
+                                                <option value="8">Cours</option>
+                                                <option value="9">Aide à la personne</option>
+                                                <option value="10">Loisirs</option>
+                                                <option value="11">Autre</option>
+                                            </select>
+                                        </p>
+                                        <p>
+                                            <label>Entrez l'activité dont vous avez besoin</label> : <input type="text" name="servicedeman" />
+                                        </p>
+
+                                        <input type="submit" value="Sélectionner l'activité" />
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="nino-serviceTitle">Proposer une activité</h4>
+
+                            <form method="post" action="traitement.php">
+                                <p>
+                                    <label for="comptence">Selectionnez la compétence de votre activite :</label><br />
+
+                                    <select name="comptence" id="comptence">
+                                        <option value="1">Cuisine</option>
+                                        <option value="2">Mecanique</option>
+                                        <option value="3">Bricolage</option>
+                                        <option value="4">Couture</option>
+                                        <option value="5">Jardinage</option>
+                                        <option value="6">Informatique</option>
+                                        <option value="7">Co-Voiturage</option>
+                                        <option value="8">Cours</option>
+                                        <option value="9">Aide à la personne</option>
+                                        <option value="10">Loisirs</option>
+                                        <option value="11">Autre</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label>Nom de l'activité</label> : <input type="text" name="nom_activite" />
+                                </p>
+                                <input type="submit" value="Créer la demande" />            
+                            </form>
+                            <p><br/><br/><br/><br/><br/></p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- FIN CREER ACTIVITE -->
+
+
+
+
+
+
+
+
+
+        <!-- CHOISIR CRENEAU
+================================================== -->
+        <section id="nino-uniqueDesign">
+            <div class="container">
+                <h2 class="nino-sectionHeading"> Choisir créneau </h2>
+                <div class="sectionContent">
+                    <div class="nino-devices">
+
+                        <div class="col-md-8 col-sm-8 item ">
+                            <div layout="row">
+                                <i class="mdi mdi-desktop-mac nino-icon fsr"/>
+                                <div>
+
+
+                                    <form method="post" action="traitement.php">
+                                        <p>
+                                            <label>Créneaux proposés</label>
+                                        </p>
+                                        <p>
+                                            <label>ID de l'activité</label> : <input type="number" />
+                                        </p>
+                                        <input type="submit" value="Sélectionner créneau" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <p><br/><br/><br/><br/><br/><br/><br/><br/></p>
+                    </div>
+                </div>
+        </section>
+        <!-- FIN CHOISIR CRENEAU -->
+    </body>
+</html>

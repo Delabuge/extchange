@@ -16,7 +16,7 @@ class Demandeur extends Uilisateur {
 	 * @ReturnType boolean
 	 */
 	public function demProposerActiviteDemandeur($aA1) {
-		// Not yet implemented
+            
 	}
 }
 ?>

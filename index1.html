@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>ExtChange - Services</title
+		
+                <!-- css -->
+                <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+                <link rel="stylesheet" type="text/css" href="css/template.css"/>
+		
+    </head>
+
+    <body>
+        <h1>Créer un profil</h1>
+        <form method="post" action="traitement.php">
+            <p>
+                <label>Entrez votre pseudo </label> : <input type="text" name="pseudo" />
+            </p>
+            <p>
+                <label>Entrez votre ville </label> : <input type="text" name="pseudo" />
+            </p>  
+
+            <p>
+               Cochez les compétences que avez :<br />
+               <input type="checkbox" name="cuisine" id="1" /> <label for="cuisine">Cuisine</label><br />
+               <input type="checkbox" name="mecanique" id="2" /> <label for="mecanique">Mécanique</label><br />
+               <input type="checkbox" name="bricolage" id="3" /> <label for="bricolage">Bricolage</label><br />
+               <input type="checkbox" name="couture" id="4" /> <label for="couture">Couture</label><br />
+               <input type="checkbox" name="jardinage" id="5" /> <label for="jardinage">Jardinage</label><br />
+               <input type="checkbox" name="informatique" id="6" /> <label for="informatique">Informatique</label><br />
+               <input type="checkbox" name="voiture" id="7" /> <label for="voiture">Co-voiturage</label><br />
+               <input type="checkbox" name="cours" id="8" /> <label for="cours">Cours</label><br />
+               <input type="checkbox" name="aideperso" id="9" /> <label for="aideperso">Aide à la personne</label><br />
+               <input type="checkbox" name="loisirs" id="10" /> <label for="loisirs">Loisirs</label><br />
+               <input type="checkbox" name="autre" id="11" /> <label for="autre">Autre</label>                
+            </p>
+             <p>
+                 Entrez vos disponibilités :<br />
+                 Lundi :
+                    <input type="checkbox" name="lundi_am" id="1" /> <label for="lundi_am">AM</label>
+                    <input type="checkbox" name="lundi_pm" id="2" /> <label for="lundi_pm">PM</label><br />
+                 Mardi : 
+                    <input type="checkbox" name="mardi_am" id="3" /> <label for="mardi_am">AM</label>
+                    <input type="checkbox" name="mardi_pm" id="4" /> <label for="mardi_pm">PM</label><br />
+                 Mercredi : 
+                    <input type="checkbox" name="mercredi_am" id="5" /> <label for="mercredi_am">AM</label>
+                    <input type="checkbox" name="mercredi_pm" id="6" /> <label for="mercredi_pm">PM</label><br />
+                 Jeudi :                  
+                    <input type="checkbox" name="jeudi_am" id="7" /> <label for="jeudi_am">AM</label>
+                    <input type="checkbox" name="jeudi_pm" id="8" /> <label for="jeudi_pm">PM</label><br />
+                 Vendredi : 
+                    <input type="checkbox" name="vendredi_am" id="9" /> <label for="vendredi_am">AM</label>
+                    <input type="checkbox" name="vendredi_pm" id="10" /> <label for="vendredi_pm">PM</label><br />
+                 Samedi : 
+                    <input type="checkbox" name="samedi_am" id="11" /> <label for="samedi_am">AM</label>
+                    <input type="checkbox" name="samedi_pm" id="12" /> <label for="samedi_pm">PM</label><br />
+                 Dimanche : 
+                    <input type="checkbox" name="dimanche_am" id="13" /> <label for="dimanche_am">AM</label>
+                    <input type="checkbox" name="dimanche_pm" id="14" /> <label for="dimanche_pm">PM</label><br />
+                          
+            </p>
+            
+            <input type="submit" value="Créer le profil" />            
+        </form>  
+        
+        <h1>Créer une activité</h1>
+        <form method="post" action="traitement.php">
+            <p>
+                <label for="comptence">Selectionnez la comptence de votre activite :</label><br />
+
+                <select name="comptence" id="comptence">
+                    <option value="1">Cuisine</option>
+                    <option value="2">Mecanique</option>
+                    <option value="3">Bricolage</option>
+                    <option value="4">Couture</option>
+                    <option value="5">Jardinage</option>
+                    <option value="6">Informatique</option>
+                    <option value="7">Co-Voiturage</option>
+                    <option value="8">Cours</option>
+                    <option value="9">Aide à la personne</option>
+                    <option value="10">Loisirs</option>
+                    <option value="11">Autre</option>
+               </select>
+            </p>
+            <p>
+                <label>Nom de l'activité</label> : <input type="text" name="nom_activite" />
+            </p>
+            <input type="submit" value="Créer la demande" />            
+        </form>  
+        
+        <h1>Rendre un service</h1>
+        <form method="post" action="traitement.php">
+            <p>
+                <label>ID de l'activité</label> : <input type="number" />
+            </p>
+            <p>
+                <label for="competence">Vous pouvez demander un service en retour de votre activité. Sélectionner la competence du demandeur qui vous intéresse :</label><br />
+
+                <select name="competence" id="competence">
+                    <option value="1">Cuisine</option>
+                    <option value="2">Mecanique</option>
+                    <option value="3">Bricolage</option>
+                    <option value="4">Couture</option>
+                    <option value="5">Jardinage</option>
+                    <option value="6">Informatique</option>
+                    <option value="7">Co-Voiturage</option>
+                    <option value="8">Cours</option>
+                    <option value="9">Aide à la personne</option>
+                    <option value="10">Loisirs</option>
+                    <option value="11">Autre</option>
+               </select>
+            </p>
+            <p>
+                <label>Entrez l'activité dont vous avez besoin</label> : <input type="text" name="servicedeman" />
+            </p>
+            
+            <input type="submit" value="Sélectionner l'activité" />
+            
+        </form>
+        
+        <h1>Choisir créneau</h1>
+        <form method="post" action="traitement.php">
+            <p>
+                <label>Créneaux proposés</label>
+            </p>
+            <p>
+                <label>ID de l'activité</label> : <input type="number" />
+            </p>
+            <input type="submit" value="Sélectionner créneau" />
+        </form>
+        
+    </body>
+</html>
