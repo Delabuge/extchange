@@ -43,14 +43,13 @@
             $logo = "<center><img src='http://openweathermap.org/img/w/" . $icon . ".png'></center>";
             $desc = "<b><p>" . $data['list'][$jour]['weather'][0]['description'] . "</p></b>";
 
-            $temperature = "<b>Température jour +" . $numJour . " :" . $data['list'][$jour]['main']['temp'] . "°C</b><br>";
-            $clouds = "<b>Nuages:" . $data['list'][$jour]['clouds']['all'] . "%</b><br>";
-            $humidity = "<b>Humidité:" . $data['list'][$jour]['main']['humidity'] . "%</b><br>";
-            $windspeed = "<b>Vitesse du vent :" . $data['list'][$jour]['wind']['speed'] . "m/s</b><br>";
-            $pressure = "<b>Pression :" . $data['list'][$jour]['main']['pressure'] . "hpa</b><br>";
-            $visibility = "<b>Visibility:" . $visibilitykm . "Km</b><br>";
-            $sunrise = "<b>Heure du lever de soleil:" . date('h:i A', $data['list'][$jour]['sys']['sunrise']) . "</b><br>";
-            $sunset = "<b>Heure du coucher de soleil:" . date('h:i A', $data['list'][$jour]['sys']['sunset']) . "</b>";
+            $temperature = "Température : " . $data['list'][$jour]['main']['temp'] . "°C<br>";
+            $clouds = "Nuages : " . $data['list'][$jour]['clouds']['all'] . "%<br>";
+            $humidity = "Humidité : " . $data['list'][$jour]['main']['humidity'] . "%<br>";
+            $windspeed = "Vitesse du vent : " . $data['list'][$jour]['wind']['speed'] . "m/s<br>";
+            $pressure = "Pression : " . $data['list'][$jour]['main']['pressure'] . "hpa<br>";
+            $visibility = "Visibility : " . $visibilitykm . "Km<br>";
+            $sunrise = "Heure du lever de soleil : " . date('h:i A', $data['list'][$jour]['sys']['sunrise']) . "<br>";
 
             switch ($donneeSouhaite) {
                 case "1":
@@ -73,6 +72,10 @@
                     break;
                 case "7":
                     return $sunset;
+                    break;
+                //Toute la météo
+                case "8":
+                    return "<b>J+".$numJour."</b><br>".$temperature.$clouds.$humidity.$windspeed.$sunrise."<br>";
                     break;
                 default:
                     return "Erreur de retour";
@@ -114,22 +117,12 @@
             function process($user, $msg) {
                 $this->say("< " . $msg);
                 switch ($msg) {
-                    case "hello":
-                        $this->send($user->socket, "Saluuuuut");
-// $this->send($user->socket,bddTest($user));
-                        break;
-                    case "temp":
+                    
+                    case "Actualiser meteo":
                         for ($i = 8; $i < 39; $i = $i + 8) {
-                            $this->send($user->socket, apiOpen("1", $i));
+                            // $this->send($user->socket,bddTest($user));
+                            $this->send($user->socket, apiOpen("8", $i));
                         }
-                        break;
-                    case "date":
-                        $this->send($user->socket, "Nous sommes le " . date("d/m/Y"));
-                        break;
-                    case "bye":
-                    case "ciao":
-                        $this->send($user->socket, "Au revoir");
-                        $this->disconnect($user->socket);
                         break;
                     default:
                         $this->send($user->socket, "Pas compris !");
